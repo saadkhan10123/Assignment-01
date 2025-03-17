@@ -1,0 +1,110 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bg-image {
+    background-image: url('https://s3-alpha-sig.figma.com/img/cb0e/ab50/83d67481b614c5d55edfa503bc6d5b92?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=j1tV6TY7UeoRm2AvEl2w0KnUDXmzvy2BxCL5sLQofBVn9t9pMMr4hJ4Vk8KQ7fmFVk52-jwZXh3jkz9lmGY2483GrBaipayQBRUwoNDSiXK1EAC7ztkDzXegmDr0ipUXWgj5QkcRQ~d~yj-rYum5UEHPZbpgFxXs5XssQc0~HbVz4ary~e6-QmRh1G6bs6QvhBH2RNnttziXwAyqTaqRhIRYtfrcrOUygwGid8ltcZbnkL4qv~LRSkEfq~LlEovAFiA0050HMzQ2Ms3gqXoxp1mEcA7NElJb66msddaR7eI34ETeAKyO2-AI77J89r90E9-ve6pHVFrtY5g8A~0n8g__');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(10px);
+    transform: scale(1.1);
+}
+
+.login-card {
+    background-color: var(--primary-bg-color);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    color: var(--text-primary-color);
+}
+
+.login-card sup {
+    color: #FF6F6F;
+}
+
+.login-label {
+    font-size: 0.7rem;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--text-faded-color);
+    margin: 20px 0;
+    flex: 1;
+}
+
+.or-text {
+    font-size: 0.75rem;
+    color: var(--text-faded-color);
+    margin: 0 1rem;
+}
+
+.or-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.33rem 0;
+}
+.login-form input {
+    background-color: var(--input-login-color);
+    color: var(--text-primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.login-form button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.login-btn {
+    background-color: var(--text-faded-color);
+    color: #C2C2C2;
+    font-weight: 600;
+}
+
+.google-btn {
+    background-color: var(--input-login-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+}
+
+.google-btn > img {
+    margin-right: 1rem;
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+}
+
+.register-link {
+    color: var(--text-faded-color);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}

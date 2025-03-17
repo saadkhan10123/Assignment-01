@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="d-flex align-items-center justify-content-center min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center p-0">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow login-card p-0">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <img src="https://s3-alpha-sig.figma.com/img/104b/430f/976acd406196967a691eb3fd387863af?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Y7W~XnUSxzBZ~MSBf-rNorA8WUQ5LQFQKiMl1II70ZKz9R0c4q6AVKo~ppFkr0jJ-Z37kVD42SEkOoYBq1vS5xvrRsPIV670~zPhr9VhlmWLxzAikqZF3SRu9gSB~WSfQlmRbm8XypgH0mifxsPBGP4F3CQDNbaYPk4N5z8NpVYsK4QcNQxJq9~Lj05CH0WZvKBrKLrca7UNE7gX4yrI3DpRaEztbu9VVBNTBPW-66xuH4YOpDe5Us2dwl-9ToDlAdxRAwhTrdhV2k2WQsWFcC~mKIVSdcyLJsewYqrW3HA5G6EsV0ji6e-cAfLVSUZcwzF7g4EIvM6bNSXJOC66RQ__" alt="" class="logo">
+                                <h2 class="text-center mb-4">Login</h2> 
+                            </div>
+                            <form class="login-form">
+                                <div class="mb-3">
+                                    <label for="username" class="login-label">Email or Username<sup>*</sup></label>
+                                    <input type="text" class="form-control login-input" id="username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="login-label">Password<sup>*</sup></label>
+                                    <input type="password" class="form-control login-input" id="password" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary login-btn">Login</button>
+                                </div>
+
+                                <div class="d-grid">
+                                    <div class="text-center or-container">
+                                        <div class="line"></div>
+                                        <p class="or-text mb-0">OR</p>
+                                        <div class="line"></div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-dark btn-block google-btn">
+                                        <img src="https://s3-alpha-sig.figma.com/img/68b6/aafd/ac9c84008eeb53e73fe88669ddc2b910?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bzGlkG1Ra-3mt0Y3Azym8nBn1U2wAbcCcnv~kIJWORZRidUammAVPiQP0Se2Mu7lvoA9RXFO8ISnKlC953iufopXTUlvGhSL49aUA5beNwx7h7ez5Zd8HvYMpyQLiek7L7JKzAfNqlR9vAZptXm2rTKbyLf9pRqL0vizcUYubVOEhVSEnGKatis3-P7Wr~s~fbkd6cY4ql-F4zt5MeRaEb68SiNF47SEaUE~HXdu5-NrSq3uo1Q7YXUeg1wxkAo2TqHAnFsIj-ZoN4WTQ27xJIZIlMc7qqHqqZ1OjSPAGz--V69eU~ASPDPv5RI44piM7EB1Cem8-2A5yq6ImlXXoA__" alt="">
+                                        <span>Continue with Google</span>
+                                    </button>
+                                    <p class="mt-4 text-center register-link">Don't have an account? <a href="../register/index.html">Sign up</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
