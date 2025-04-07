@@ -4,8 +4,7 @@ body {
 }
 
 .bg-image {
-    background-image: url('https://s3-alpha-sig.figma.com/img/cb0e/ab50/83d67481b614c5d55edfa503bc6d5b92?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=j1tV6TY7UeoRm2AvEl2w0KnUDXmzvy2BxCL5sLQofBVn9t9pMMr4hJ4Vk8KQ7fmFVk52-jwZXh3jkz9lmGY2483GrBaipayQBRUwoNDSiXK1EAC7ztkDzXegmDr0ipUXWgj5QkcRQ~d~yj-rYum5UEHPZbpgFxXs5XssQc0~HbVz4ary~e6-QmRh1G6bs6QvhBH2RNnttziXwAyqTaqRhIRYtfrcrOUygwGid8ltcZbnkL4qv~LRSkEfq~LlEovAFiA0050HMzQ2Ms3gqXoxp1mEcA7NElJb66msddaR7eI34ETeAKyO2-AI77J89r90E9-ve6pHVFrtY5g8A~0n8g__');
-    background-size: cover;
+    background-image: url('../images/login-background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
