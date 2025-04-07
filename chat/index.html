@@ -3,46 +3,275 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>HiveMind Chat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container-fluid">
-      <h1>Chat</h1>
-      <div class="row">
-        <div class="col-4">
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action">Chat 1</a>
-                <a href="#" class="list-group-item list-group-item-action">Chat 2</a>
-                <a href="#" class="list-group-item list-group-item-action">Chat 3</a>
-            </div>
+    <div class="chat-container">
+      <!-- Header -->
+      <header class="chat-header">
+        <div class="logo-container">
+          <img src="https://i.postimg.cc/x88sw-hZF/logo-hive.png" alt="HiveMind" class="logo">
+          <h1><span class="hive-text">Hive</span><span class="mind-text">Mind</span></h1>
         </div>
-        <div class="col-8">
-            <div class="card">
-                <div class="card-header">Chat 1</div>
-                <div class="card-body">
-                    <div class="chat">
-                        <div class="chat-message">
-                            <div class="chat-message-content">Hello</div>
-                            <div class="chat-message-time">12:00</div>
-                        </div>
-                        <div class="chat-message chat-message-right">
-                            <div class="chat-message-content">Hi</div>
-                            <div class="chat-message-time">12:01</div>
-                        </div>
+        <div class="profile-info">
+          <img src="https://picsum.photos/200/300" alt="Profile" class="profile-image">
+          <div>
+            <span class="user-info">Artemis Salidius</span>
+            <span class="user-tag tag-purple">#DespairDad</span>
+          </div>
+        </div>
+        <div class="header-icons">
+          <div class="icon-btn">
+            <i class="bi bi-person-circle"></i>
+            <span>Profile</span>
+          </div>
+          <div class="icon-btn">
+            <i class="bi bi-telephone"></i>
+            <span>Call</span>
+          </div>
+          <div class="icon-btn">
+            <i class="bi bi-three-dots-vertical"></i>
+            <span>More</span>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Main Content Area -->
+      <div class="chat-main-container">
+        <!-- Contacts Box -->
+        <div class="contacts-box">
+          <!-- Contacts Section -->
+          <div class="sidebar-section">
+            <h2 class="sidebar-heading">Contacts <span class="status-badge">Active</span></h2>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=1" alt="Profile" class="contact-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-name">Sara Williams</span>
+                  <span class="contact-role">Senior Consultant</span>
+                </div>
+                <span class="contact-tag tag-red">#cadlist101</span>
+              </li>
+              <li class="contact-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=2" alt="Profile" class="contact-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-name">Artemis Salidius</span>
+                  <span class="contact-role">Finance Advisor</span>
+                </div>
+                <span class="contact-tag tag-purple">#DespairDad</span>
+              </li>
+              <li class="contact-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=3" alt="Profile" class="contact-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-name">Franky</span>
+                  <span class="contact-role">Student</span>
+                </div>
+                <span class="contact-tag tag-green">#Reaper007</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Section Divider -->
+          <div class="section-divider">
+            <div class="divider-line"></div>
+          </div>
+          
+          <!-- Chats Section -->
+          <div class="sidebar-section">
+            <h2 class="sidebar-heading">Chats</h2>
+            <ul class="chat-list">
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=4" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">Raj Vishal</span>
+                  <span class="chat-role">Software Engineer</span>
+                </div>
+                <span class="chat-tag tag-red">#Cheeni18</span>
+              </li>
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=5" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">Michael Smith</span>
+                  <span class="chat-role">Sr. Photographer</span>
+                </div>
+                <span class="chat-tag tag-blue">#Bigmic32</span>
+              </li>
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=6" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">Judy Ju</span>
+                  <span class="chat-role">Law Aspirant</span>
+                </div>
+                <span class="chat-tag tag-teal">#Jujatsu1</span>
+              </li>
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=7" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">David Harbour</span>
+                  <span class="chat-role">Actor</span>
+                </div>
+                <span class="chat-tag tag-yellow">#DavidHb</span>
+              </li>
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=8" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">Charity Mill</span>
+                  <span class="chat-role">Fashion Designer</span>
+                </div>
+                <span class="chat-tag tag-purple">#HeartSage</span>
+              </li>
+              <li class="chat-item">
+                <div class="contact-avatar">
+                  <img src="https://picsum.photos/200/300?random=9" alt="Profile" class="chat-image">
+                  <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                  <span class="chat-name">Yasin Alma'ar</span>
+                  <span class="chat-role">Mechanical Engineer</span>
+                </div>
+                <span class="chat-tag tag-orange">#Unknown12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Chat Box -->
+        <div class="chat-box">
+          <div class="chat-content">
+            <div class="chat-messages">
+              <div class="message received">
+                <div class="message-avatar">
+                  <img src="https://picsum.photos/200/300?random=10" alt="Profile">
+                </div>
+                <div class="message-bubble">
+                  <div class="message-content">Hey Armi! How's everything Rollin'?</div>
+                  <div class="message-time">Seen • 12:30 PM</div>
+                </div>
+              </div>
+              
+              <div class="message sent">
+                <div class="message-bubble">
+                  <div class="message-content">Hey Lindon! Just working on this new Agents 👍</div>
+                  <div class="message-time">Sent • 12:30 PM</div>
+                </div>
+                <div class="message-avatar">
+                  <img src="https://picsum.photos/200/300?random=11" alt="Profile">
+                </div>
+              </div>
+              
+              <div class="message received">
+                <div class="message-avatar">
+                  <img src="https://picsum.photos/200/300?random=12" alt="Profile">
+                </div>
+                <div class="message-bubble">
+                  <div class="message-content">That's so cool. I wanna see it now 🤩. Share it here, let me be the beta tester</div>
+                  <div class="message-time">Seen • 12:30 PM</div>
+                </div>
+              </div>
+              
+              <div class="message sent">
+                <div class="message-bubble">
+                  <div class="message-content">Sure! Here ya go!!!</div>
+                  <div class="message-time">Sent • 12:30 PM</div>
+                </div>
+                <div class="message-avatar">
+                  <img src="https://picsum.photos/200/300?random=13" alt="Profile">
+                </div>
+              </div>
+              
+              <div class="message sent">
+                <div class="message-bubble">
+                  <div class="agent-card">
+                    <div class="agent-card-image">
+                      <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="Random image">
                     </div>
+                    <div class="agent-card-title">Img2Vec agent</div>
+                    <button class="agent-card-button">Test Now!</button>
+                  </div>
+                  <div class="message-time">Sent • 12:30 PM</div>
                 </div>
-                <div class="card-footer">
-                    <form>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Message">
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </div>
-                    </form>
+                <div class="message-avatar">
+                  <img src="https://picsum.photos/200/300?random=15" alt="Profile">
                 </div>
+              </div>
             </div>
+            
+            <div class="chat-input">
+              <div class="typing-indicator">Artemis is typing...</div>
+              <div class="input-container">
+                <input type="text" placeholder="Message #DespairDad" class="message-input">
+                <div class="input-controls">
+                  <button class="control-button">
+                    <i class="bi bi-grid"></i>
+                  </button>
+                  <button class="control-button">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+      // Image click handler to view larger images
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all clickable images in messages and agent cards
+        const messageImages = document.querySelectorAll('.message-content img, .agent-card-image img');
+        
+        messageImages.forEach(img => {
+          img.addEventListener('click', function() {
+            // Create modal or lightbox for the image
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            
+            // Create image element with full size
+            const fullImg = document.createElement('img');
+            fullImg.src = this.src;
+            
+            // Add close functionality
+            modal.addEventListener('click', function() {
+              document.body.removeChild(modal);
+            });
+            
+            // Append elements
+            modal.appendChild(fullImg);
+            document.body.appendChild(modal);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
