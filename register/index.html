@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account | MindHive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="d-flex align-items-center justify-content-center min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center p-0">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow register-card p-0">
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <img src="../images/logo.png" alt="logo" class="logo">
+                                <h2 class="text-center mb-4">Create Your Account</h2>
+                            </div>
+                            
+                            <!-- Progress Bar -->
+                            <div class="progress-container mb-4">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="step-indicators">
+                                    <div class="step active" data-step="1">
+                                        <div class="step-number">1</div>
+                                        <div class="step-text">Account</div>
+                                    </div>
+                                    <div class="step" data-step="2">
+                                        <div class="step-number">2</div>
+                                        <div class="step-text">Profile</div>
+                                    </div>
+                                    <div class="step" data-step="3">
+                                        <div class="step-number">3</div>
+                                        <div class="step-text">Complete</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form class="register-form">
+                                <!-- Step 1: Account Information -->
+                                <div class="form-step" id="step1">
+                                    <div class="mb-3">
+                                        <label for="email" class="register-label">Email<sup>*</sup></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-envelope text-muted"></i>
+                                            </span>
+                                            <input type="email" class="form-control register-input" id="email" placeholder="your.email@example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="register-label">Username<sup>*</sup></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-at text-muted"></i>
+                                            </span>
+                                            <input type="text" class="form-control register-input" id="username" placeholder="Create a unique username" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="register-label">Password<sup>*</sup></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-lock text-muted"></i>
+                                            </span>
+                                            <input type="password" class="form-control register-input" id="password" placeholder="Create a strong password" required>
+                                            
+                                        </div>
+                                        <div class="password-strength">
+                                            <div class="strength-meter"></div>
+                                        </div>
+                                        <div class="password-feedback"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="register-label">Confirm Password<sup>*</sup></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-lock text-muted"></i>
+                                            </span>
+                                            <input type="password" class="form-control register-input" id="confirmPassword" placeholder="Confirm your password" required>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-4">
+                                        <button type="button" class="btn btn-primary next-step" data-step="1">
+                                            Next <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2: Profile Information -->
+                                <div class="form-step" id="step2" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="register-label">First Name<sup>*</sup></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent border-0">
+                                                    <i class="fas fa-user text-muted"></i>
+                                                </span>
+                                                <input type="text" class="form-control register-input" id="firstName" placeholder="John" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="register-label">Last Name<sup>*</sup></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-transparent border-0">
+                                                    <i class="fas fa-user text-muted"></i>
+                                                </span>
+                                                <input type="text" class="form-control register-input" id="lastName" placeholder="Doe" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="birthdate" class="register-label">Date of Birth</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-calendar text-muted"></i>
+                                            </span>
+                                            <input type="date" class="form-control register-input" id="birthdate">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="register-label">Phone Number</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent border-0">
+                                                <i class="fas fa-phone text-muted"></i>
+                                            </span>
+                                            <input type="tel" class="form-control register-input" id="phone" placeholder="(123) 456-7890">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-4">
+                                        <button type="button" class="btn btn-outline-secondary prev-step" data-step="2">
+                                            <i class="fas fa-arrow-left me-2"></i> Back
+                                        </button>
+                                        <button type="button" class="btn btn-primary next-step" data-step="2">
+                                            Next <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3: Terms and Completion -->
+                                <div class="form-step" id="step3" style="display: none;">
+                                    <div class="mb-4">
+                                        <!-- Terms and Conditions Accordion - NEW COMPONENT -->
+                                        <div class="accordion terms-accordion mb-4" id="termsAccordion">
+                                            <div class="accordion-item" style="background-color: rgba(33, 40, 51, 0.8); border: 1px solid rgba(74, 99, 144, 0.3); border-radius: 8px;">
+                                                <h2 class="accordion-header" id="headingTerms">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTerms" aria-expanded="false" aria-controls="collapseTerms" style="background-color: rgba(33, 40, 51, 0.8); color: white; font-weight: 500;">
+                                                        Terms of Service
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTerms" class="accordion-collapse collapse" aria-labelledby="headingTerms" data-bs-parent="#termsAccordion">
+                                                    <div class="accordion-body" style="color: white; font-size: 0.85rem;">
+                                                        <p>Welcome to our platform. By using our services, you agree to these Terms of Service.</p>
+                                                        <p>These terms outline your rights and responsibilities when using our services...</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl id aliquet tincidunt, nisl nisl aliquam nisl, eu aliquam nisl nisl sit amet nisl.</p>
+                                                        <p>Please read these terms carefully before using our services.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item mt-2" style="background-color: rgba(33, 40, 51, 0.8); border: 1px solid rgba(74, 99, 144, 0.3); border-radius: 8px;">
+                                                <h2 class="accordion-header" id="headingPrivacy">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrivacy" aria-expanded="false" aria-controls="collapsePrivacy" style="background-color: rgba(33, 40, 51, 0.8); color: white; font-weight: 500;">
+                                                        Privacy Policy
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsePrivacy" class="accordion-collapse collapse" aria-labelledby="headingPrivacy" data-bs-parent="#termsAccordion">
+                                                    <div class="accordion-body" style="color: var(--text-secondary-color); font-size: 0.85rem;">
+                                                        <p>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
+                                                        <p>We collect information when you register, use our services, or interact with our platform...</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl id aliquet tincidunt, nisl nisl aliquam nisl, eu aliquam nisl nisl sit amet nisl.</p>
+                                                        <p>By using our services, you consent to our data practices as described in this policy.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item mt-2" style="background-color: rgba(33, 40, 51, 0.8); border: 1px solid rgba(74, 99, 144, 0.3); border-radius: 8px;">
+                                                <h2 class="accordion-header" id="headingCookies">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCookies" aria-expanded="false" aria-controls="collapseCookies" style="background-color: rgba(33, 40, 51, 0.8); color: white; font-weight: 500;">
+                                                        Cookie Policy
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseCookies" class="accordion-collapse collapse" aria-labelledby="headingCookies" data-bs-parent="#termsAccordion">
+                                                    <div class="accordion-body" style="color: var(--text-secondary-color); font-size: 0.85rem;">
+                                                        <p>Our website uses cookies to enhance your browsing experience and provide personalized services.</p>
+                                                        <p>Cookies are small text files stored on your device that help us recognize you and remember your preferences...</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl id aliquet tincidunt, nisl nisl aliquam nisl, eu aliquam nisl nisl sit amet nisl.</p>
+                                                        <p>You can manage cookie preferences through your browser settings.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                            <label class="form-check-label" for="termsCheck" style="font-size: 0.85rem;">
+                                                I agree to the <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseTerms">Terms of Service</a> and <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapsePrivacy">Privacy Policy</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-4">
+                                        <button type="button" class="btn btn-outline-secondary prev-step" data-step="3">
+                                            <i class="fas fa-arrow-left me-2"></i> Back
+                                        </button>
+                                        <button type="submit" class="btn btn-primary register-btn">
+                                            <i class="fas fa-user-plus me-2"></i>Complete Registration
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid mt-4">
+                                    <div class="text-center or-container">
+                                        <div class="line"></div>
+                                        <p class="or-text mb-0">OR</p>
+                                        <div class="line"></div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-dark btn-block google-btn">
+                                        <img src="../images/google-logo.png" alt="google-logo" class="google-logo">
+                                        <span>Register with Google</span>
+                                    </button>
+                                    <p class="mt-4 text-center login-link">Already have an account? <a href="../login/index.html">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Password toggle visibility
+        document.querySelectorAll('.password-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const input = button.previousElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('fa-eye-slash', 'fa-eye');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('fa-eye', 'fa-eye-slash');
+                }
+            });
+        });
+        
+        // Password strength checker
+        const passwordInput = document.getElementById('password');
+        const strengthMeter = document.querySelector('.strength-meter');
+        const passwordFeedback = document.querySelector('.password-feedback');
+        
+        passwordInput.addEventListener('input', () => {
+            const val = passwordInput.value;
+            const result = calculatePasswordStrength(val);
+            
+            // Update the strength meter
+            strengthMeter.style.width = result.score + '%';
+            
+            // Update color based on strength
+            if (result.score < 25) {
+                strengthMeter.style.backgroundColor = '#dc3545'; // Weak (red)
+            } else if (result.score < 50) {
+                strengthMeter.style.backgroundColor = '#ffc107'; // Medium (yellow)
+            } else if (result.score < 75) {
+                strengthMeter.style.backgroundColor = '#17a2b8'; // Good (blue)
+            } else {
+                strengthMeter.style.backgroundColor = '#28a745'; // Strong (green)
+            }
+            
+            // Show feedback message
+            passwordFeedback.textContent = result.message;
+        });
+        
+        function calculatePasswordStrength(password) {
+            // Simple password strength calculation
+            let score = 0;
+            let message = '';
+            
+            if (password.length === 0) {
+                return { score: 0, message: '' };
+            }
+            
+            // Length check
+            if (password.length > 6) score += 20;
+            if (password.length > 10) score += 20;
+            
+            // Character variety check
+            if (/[a-z]/.test(password)) score += 10;
+            if (/[A-Z]/.test(password)) score += 10;
+            if (/[0-9]/.test(password)) score += 10;
+            if (/[^a-zA-Z0-9]/.test(password)) score += 10;
+            
+            // Set appropriate message
+            if (score < 30) {
+                message = 'Your password is too weak';
+            } else if (score < 60) {
+                message = 'Your password is medium strength';
+            } else if (score < 80) {
+                message = 'Your password is strong';
+            } else {
+                message = 'Your password is very strong';
+            }
+            
+            return { score, message };
+        }
+        
+        // Multi-step form navigation
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', () => {
+                const currentStep = parseInt(button.dataset.step);
+                const nextStep = currentStep + 1;
+                
+                // Validate current step fields before proceeding
+                if (validateStep(currentStep)) {
+                    // Hide current step, show next step
+                    document.getElementById(`step${currentStep}`).style.display = 'none';
+                    document.getElementById(`step${nextStep}`).style.display = 'block';
+                    
+                    // Update progress bar and step indicators
+                    updateProgress(nextStep);
+                    
+                    // Add animation to new step
+                    document.getElementById(`step${nextStep}`).classList.add('animate-step');
+                }
+            });
+        });
+        
+        document.querySelectorAll('.prev-step').forEach(button => {
+            button.addEventListener('click', () => {
+                const currentStep = parseInt(button.dataset.step);
+                const prevStep = currentStep - 1;
+                
+                // Hide current step, show previous step
+                document.getElementById(`step${currentStep}`).style.display = 'none';
+                document.getElementById(`step${prevStep}`).style.display = 'block';
+                
+                // Update progress bar and step indicators
+                updateProgress(prevStep);
+                
+                // Add animation to new step
+                document.getElementById(`step${prevStep}`).classList.add('animate-step');
+            });
+        });
+        
+        function updateProgress(step) {
+            // Update progress bar
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = `${step * 33}%`;
+            progressBar.setAttribute('aria-valuenow', step * 33);
+            
+            // Update step indicators
+            document.querySelectorAll('.step').forEach(el => {
+                const stepNum = parseInt(el.dataset.step);
+                if (stepNum < step) {
+                    el.classList.add('completed');
+                    el.classList.remove('active');
+                } else if (stepNum === step) {
+                    el.classList.add('active');
+                    el.classList.remove('completed');
+                } else {
+                    el.classList.remove('active', 'completed');
+                }
+            });
+        }
+        
+        function validateStep(step) {
+            // Basic validation for each step's required fields
+            const stepElement = document.getElementById(`step${step}`);
+            const requiredFields = stepElement.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('is-invalid');
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            // Additional validation for specific steps
+            if (step === 1) {
+                // Check password match
+                const password = document.getElementById('password');
+                const confirmPassword = document.getElementById('confirmPassword');
+                
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.classList.add('is-invalid');
+                    isValid = false;
+                    
+                    if (!document.querySelector('.password-mismatch')) {
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'invalid-feedback password-mismatch';
+                        errorDiv.textContent = 'Passwords do not match';
+                        confirmPassword.parentNode.appendChild(errorDiv);
+                    }
+                } else {
+                    confirmPassword.classList.remove('is-invalid');
+                    const errorDiv = document.querySelector('.password-mismatch');
+                    if (errorDiv) errorDiv.remove();
+                }
+            }
+            
+            return isValid;
+        }
+        
+        // Form animations
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('step1').classList.add('animate-step');
+        });
+    </script>
+    
+    <!-- Added register.js script -->
+    <script src="register.js"></script>
+</body>
+</html>

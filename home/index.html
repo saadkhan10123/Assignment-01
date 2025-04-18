@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HiveMind</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to global styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,10 +23,19 @@
                 <button class="search-button"><i class="bi bi-search"></i></button>
             </div>
             
+            <!-- Added mobile profile for mobile view -->
+            <div class="mobile-profile">
+                <a href="../user/index.html">
+                    <img src="https://picsum.photos/35?random=1" alt="Profile" class="profile-image">
+                </a>
+            </div>
+            
             <div class="header-icons">
                 <div class="icon-btn">
-                    <i class="bi bi-chat-dots"></i>
-                    <span>Chats</span>
+                    <a href="../chat/index.html" class="icon-btn">
+                        <i class="bi bi-chat-dots"></i>
+                        <span>Chats</span>
+                    </a>
                 </div>
                 <div class="icon-btn">
                     <i class="bi bi-bell"></i>
@@ -45,7 +56,9 @@
                     <span class="user-info">Muhammad Ali</span>
                     <span class="user-tag tag-purple">#captainAlpha</span>
                 </div>
-                <img src="https://picsum.photos/35?random=1" alt="Profile" class="profile-image">
+                <a href="../user/index.html" class="profile-link">
+                    <img src="https://picsum.photos/35?random=1" alt="Profile" class="profile-image">
+                </a>
             </div>
         </header>
         
@@ -153,6 +166,52 @@
             
             <!-- Content area -->
             <div class="content-area">
+                <!-- Featured Content Carousel - NEW COMPONENT -->
+                <div class="featured-carousel-section mb-4">
+                    <h2 class="section-header">Featured Posts</h2>
+                    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-4 shadow">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/1200/400?random=50" class="d-block w-100" alt="Featured Content">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>AI Renaissance in Digital Art</h5>
+                                    <p>How artificial intelligence is changing the landscape of digital creativity</p>
+                                    <button class="btn btn-primary btn-sm">Read More</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/1200/400?random=51" class="d-block w-100" alt="Featured Content">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>The Future of Web Development</h5>
+                                    <p>New frameworks and technologies shaping tomorrow's web experiences</p>
+                                    <button class="btn btn-primary btn-sm">Read More</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/1200/400?random=52" class="d-block w-100" alt="Featured Content">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Community Spotlight: Creators of the Month</h5>
+                                    <p>Meet the innovative minds driving engagement across HiveMind</p>
+                                    <button class="btn btn-primary btn-sm">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="stories-section">
                     <h2 class="section-header">Your Stories</h2>
                     <div class="stories-container">
@@ -364,6 +423,38 @@
                 </div>
             </div>
         </main>
+
+        <!-- Mobile Bottom Navigation -->
+        <nav class="mobile-nav">
+            <a href="../home/index.html" class="nav-item active">
+                <i class="bi bi-house-door-fill"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="bi bi-search"></i>
+                <span>Search</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="bi bi-plus-circle"></i>
+                <span>Create</span>
+            </a>
+            <a href="../chat/index.html" class="nav-item">
+                <i class="bi bi-chat-dots"></i>
+                <span>Chat</span>
+            </a>
+            <a href="../user/index.html" class="nav-item">
+                <i class="bi bi-person"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Add Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Common JavaScript -->
+    <script src="../script.js"></script>
+    <!-- Page-specific JavaScript -->
+    <script src="home.js"></script>
 </body>
 </html>
