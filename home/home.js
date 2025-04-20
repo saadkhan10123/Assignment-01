@@ -307,10 +307,12 @@ function initPostInteractions() {
                 currentCount = parseInt(countText.replace(/[^\d]/g, ''));
             }
             
-            // If already liked (has active class), unlike it
-            if (this.classList.contains('active')) {
-                this.classList.remove('active');
-                icon.classList.remove('active');
+            // If already liked (has liked class), unlike it
+            if (this.classList.contains('liked')) {
+                this.classList.remove('liked');
+                icon.classList.remove('liked');
+                icon.classList.remove('bi-heart-fill');
+                icon.classList.add('bi-heart');
                 
                 // Decrement count and format
                 const newCount = currentCount - 1;
@@ -322,8 +324,10 @@ function initPostInteractions() {
                 }
             } else {
                 // Like the post
-                this.classList.add('active');
-                icon.classList.add('active');
+                this.classList.add('liked');
+                icon.classList.add('liked');
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill');
                 
                 // Increment count and format
                 const newCount = currentCount + 1;

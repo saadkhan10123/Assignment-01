@@ -850,3 +850,7 @@ img {
 .mobile-profile {
     display: none; /* Hidden by default (on desktop) */
 }
+
+.liked {
+    color: red;
+}
