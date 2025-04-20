@@ -118,3 +118,34 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(iconLink);
     }
 });
+
+// Register the user by adding the username to local storage
+function registerUser() {
+    
+    // get username and user's full name from the form
+    const username = document.getElementById('username').value.trim();
+    
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+
+    const fullName = firstName + ' ' + lastName;
+
+    // Check if a user already exists in local storage
+    const existingUser = JSON.parse(localStorage.getItem('user'));
+    if (existingUser) {
+        showToast('A user is already registered. Please log out first.', 'error');
+        window.href = '../login/index.html';
+        return;
+    }
+
+    // Create a new user object
+    const newUser = {
+        username: username,
+        fullName: fullName
+    };
+
+    // Save the new user to local storage
+    localStorage.setItem('user', JSON.stringify(newUser));
+    showToast('User registered successfully!', 'success');
+
+}

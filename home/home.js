@@ -263,6 +263,22 @@ function showToast(message, type = 'info') {
     }, 3000);
 }
 
+// Dynamic Username and Full Name Display from localStorage
+
+function displayUserName() {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    const fullNameElement = document.querySelector('.user-info');
+    const usernameElement = document.querySelector('.user-tag');
+
+    fullNameElement.textContent = user ? user.fullName : 'Guest User';
+    usernameElement.textContent = user ? `#${user.username}` : '#guest_user';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    displayUserName(); // Call the function to display username and full name
+})
+
 // 5. Post Interaction Simulation
 function initPostInteractions() {
     const interactionItems = document.querySelectorAll('.interaction-item');
